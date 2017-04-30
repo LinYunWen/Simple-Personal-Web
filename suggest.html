@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>suggest</title>
+
+	<style>
+		body {
+			margin:1% 0 0 5%;
+			font-size:16px;
+		}
+		h1 {
+			font-family:"Lucida Console", serif;
+		}
+		p {
+			font-family:"Lucida Console", serif;
+		}
+		input {
+			border-radius:3px;
+		}
+		select {
+			border-radius:3px;
+		}
+		textarea {
+			font-family:"Lucida Console", serif;
+			color:grey;
+			border-radius:6px;
+			box-shadow: 3px 3px 1px grey;
+		}		
+	</style>
+</head>
+<body>
+	<h1>Suggest</h1>
+
+	<form>
+		<p>name : 
+			<input type="text" name="name"></p>
+		<p>gender :
+			<input type="radio" name="gender" checked="checked"> Male
+			<input type="radio" name="gender"> Female</p>
+		<p>age :
+			<select name="age">
+				<option value="13">0-13</option>
+				<option selected="selected" value="24">14-24</option>
+				<option value="40">25-40</option>
+				<option value="65">41-65</option>
+				<option value="66">66+</option>
+			</select></p>
+		<p>Email :
+			<input type="text" name="email"></p>
+
+		<p>
+			<textarea name="suggest" rows="20" cols="45">&nbsp Input your suggestion...</textarea>
+			</p>
+		<p>
+			<input type="reset" name="reset" value="reset">
+			<input type="submit" name="submit" value="submit">
+		</p>
+	</form>
+		
+
+</body>
+</html>

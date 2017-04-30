@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>album4</title>
+
+	<style>
+		section img{
+			max-width: 100%;
+			opacity: 0.5;
+			filter: alpha(opacity=50);
+		}
+		section img:hover{
+			opacity:1.0;
+			filter: alpha(opacity=100);
+		}
+		.center{
+			margin:1% 97% 95% 3%;
+			width:60%;
+		}
+		ul{
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+		li{
+			float: left;
+			margin-right:1%;
+			width:24%;
+		}
+		h1 {
+			font-family:"微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU", "標楷體", "DFKai-sb", serif;
+		}
+		.thumb {
+			border-bottom-left-radius:10px;
+			border-top-right-radius:10px;
+		}
+	</style>
+
+</head>
+<body>
+	
+	<div class="center">
+		<h1>&nbsp2014資訊週</h1>
+		<div>
+			<img src="album4/album4-1.jpg" id="bigimg" width="100%">
+		</div>
+		<section>
+			<ul>
+				<li><img src="album4/album4-1.jpg" class="thumb" data-image="album4/album4-1.jpg" ></li>
+				<li><img src="album4/album4-2.jpg" class="thumb" data-image="album4/album4-2.jpg" ></li>
+				<li><img src="album4/album4-3.jpg" class="thumb" data-image="album4/album4-3.jpg" ></li>
+				<li><img src="album4/album4-4.jpg" class="thumb" data-image="album4/album4-4.jpg" ></li>
+				<!--<li><img src="album4/album4-5.jpg" class="thumb" data-image="album4/album4-5.jpg" ></li>-->
+			</ul>
+		</section>
+	</div>
+		
+	<script>
+			var thumbs = document.querySelectorAll('.thumb');
+			for (var i=0 ; i<thumbs.length ; i++)
+			{
+				thumbs[i].onclick = function() {
+					//console.log(this.dataset.image);
+					document.getElementById('bigimg').src = this.dataset.image;
+				};
+			}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Autobiography</title>
+
+	<style type="text/css">
+		button {
+			border-radius: 3px;
+			padding: 5px;
+		}
+	</style>
+
+	<script>
+		function changeLanguage(){
+			var element = document.getElementById('content');
+			var Bt = document.getElementById('button');
+			if (Bt.innerHTML == 'In English')
+			{
+				element.innerHTML = '<div id="US"><h1 align="center">&nbspAutobiography</h1><p><i>I am good at math. Besides, it is one of my favorite subjects.</i> Every time I solve difficult mathematical problems, I would get a sense of achievement. Later, I wanted to test my ability by participating in AMC12 while I was second grader in senior high. I scored 91.5, getting the admission to the second round. Despite the failure of second round, as the proverb runs “Stay hungry, stay foolish.” <i>I still keep the curiosity to learning mathematics.</i></p><p>Though I am busy with my schoolwork, I like to take part in a large variety of activities, such as attending concerts in the school to cultivate my music appreciation ability. <i>Besides, I took part in NCKU computer science and information engineering camp in summer vacation to acquire more knowledge related to this major</i> and saw the exhibition, called ”Technologies of the Future“ to know something new. By doing so , I absorb plenty of knowledge not only this major but also in different fields.</p><p><b>Changing the world is my dream.</b> There are two things I will do to make my dream come true. First, I want to assist the poor and the underprivileged around the world to get better lives. So I will devote myself to some international organizations to help others after graduating from senior high school. Second, <b>I want to innovate something improve our lives.</b></p> <p>To fulfill my dream of that, I will study hard, especially English, which is a tool for both communication and research. Above all, <i>I will seize every opportunity to go abroad, the exchange student programs in particular with an view to expanding my horizons, to learn different culture, and to meet different people.</i> Just as Steve Job said “Live each day as if it were your last.” I am determined to live a colorful and meaningful life in college and sincerely hope that you give me the invaluable chance to study in the Department of computer science and information engineering.</p></div>';
+				Bt.innerHTML = "In Chinese";
+			}
+			else
+			{
+				element.innerHTML = '<div id="zh"><h1 align="center">&nbsp自傳</h1><p>	我是成功大學資訊工程系大二生林允文，畢業於桃園中央大學附屬中壢高中，高中時在校總成績前8%，<b>數學是我比較擅長的一科</b>，曾經參加數學AMC　12的考試獲91分，為參加應試生中的前10%，不過其他科目也還算可以，所以經常熱心指導有疑問的同學或幫同學解題。</p><p><b>為人和善，也很有耐心</b>，如果同學聽不懂都會重新講解一次，或是換個比較容易懂方向解釋，即便升上大一也是如此，只要有人問我，都會盡力讓他們理解。</p><p>	雖然家境算小康，但是升上大學後，希望可以打工賺點錢，不只貼補生活費，減輕父母的負擔，也想要在經濟上獨立一點，不要總是依靠家裡。</p><p>雖然目前還沒有比較正式的教學經驗，但是<b>我會盡量努力學習如何教學以及如何和學生互動，並不斷改善</b>，希望在教導方面盡量以多方面講解並由淺入深，來讓學生可以比較容易聽懂，想要學生是真正的理解，而不是硬背公式或題目。</p><p>再配合一些題目解析或補充不同題型，可以較完整的學習，也很歡迎學生隨時發問，我也盡力回答，如果遇上我不會的題目，我會抄下來回去思考或問問我系上的朋友們，下次上課回答，鼓勵他們發問，我覺得本是教學相長，<b>我不只在教他們，他們也讓我學到不少</b>，對彼此都有相當的幫助。</p><p>	而且我覺得讀書真的是改變自己身價的關鍵，所以當他們真的想要為了自己而參加這個課輔班學習，讓我有更想要幫助他們學習的動力。</p>		</div>';
+				Bt.innerHTML = "In English";
+			}
+			
+
+
+		}
+	</script>
+
+	<style>
+		button {
+			float:right;
+		}
+		#content {
+			font-family:"微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU", "標楷體", "DFKai-sb", serif;
+		}
+		p {
+			font-size:16px;
+			text-indent:28px;
+		}
+	</style>
+</head>
+<body>
+
+	<button id="button" type="button" onclick="changeLanguage()">In English</button>
+	<div id="content" style="margin-left:5%; margin-right:5%;">
+		<div id="zh">
+			<h1 align="center">&nbsp自傳</h1>
+			<p>
+				我是成功大學資訊工程系大二生林允文，畢業於桃園中央大學附屬中壢高中，高中時在校總成績前8%，<b>數學是我比較擅長的一科</b>，曾經參加數學AMC　12的考試獲91分，為參加應試生中的前10%，不過其他科目也還算可以，所以經常熱心指導有疑問的同學或幫同學解題。
+			</p>
+			<p>
+				<b>為人和善，也很有耐心</b>，如果同學聽不懂都會重新講解一次，或是換個比較容易懂方向解釋，即便升上大一也是如此，只要有人問我，都會盡力讓他們理解。
+			</p>
+			<p>
+				雖然家境算小康，但是升上大學後，希望可以打工賺點錢，不只貼補生活費，減輕父母的負擔，也想要在經濟上獨立一點，不要總是依靠家裡。
+			</p>
+			<p>
+				雖然目前還沒有比較正式的教學經驗，但是<b>我會盡量努力學習如何教學以及如何和學生互動，並不斷改善</b>，希望在教導方面盡量以多方面講解並由淺入深，來讓學生可以比較容易聽懂，想要學生是真正的理解，而不是硬背公式或題目。
+			</p>
+			<p>
+				再配合一些題目解析或補充不同題型，可以較完整的學習，也很歡迎學生隨時發問，我也盡力回答，如果遇上我不會的題目，我會抄下來回去思考或問問我系上的朋友們，下次上課回答，鼓勵他們發問，我覺得本是教學相長，<b>我不只在教他們，他們也讓我學到不少</b>，對彼此都有相當的幫助。
+			</p>
+			<p>
+				而且我覺得讀書真的是改變自己身價的關鍵，所以當他們真的想要為了自己而參加這個課輔班學習，讓我有更想要幫助他們學習的動力。
+			</p>
+		</div>
+	</div>
+</body>
+</html>

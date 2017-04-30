@@ -1,0 +1,173 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+	<title>HW1</title>
+
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" herf="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	
+
+
+	<script type="text/javascript">
+		var imageBase = new Array("musical1.jpg","musical2.jpg","playteam.jpg","img1.jpg","img2.jpg","playteam2.jpg","sa.jpg","WLT.jpg");
+		setInterval("randoming()",3000);
+
+		function randoming(){
+			var imgIndex = Math.ceil( Math.random()*7 );
+			//console.log(imgIndex);
+			document.getElementById("showing").src = imageBase[imgIndex];
+		}
+	</script>
+
+	<script type="text/javascript">
+		function changeIframe(source){
+			var frame = document.getElementById('frame');
+			console.log("in function");
+			frame.src = source;
+		}
+	</script>
+
+	<style>
+		#leftMenu {
+			font-family:"微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU", "標楷體", "DFKai-sb", serif;
+			font-size: 16px;
+			padding: 1px;
+			padding-right: 3px;
+			border-radius:3px;
+			background: #7799E3;
+			background: linear-gradient(to bottom right, #7799E3, white);
+		}
+		#headbar {
+			font-family:"微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU", "標楷體", "DFKai-sb", serif;
+			font-size: 18px;
+			color:white;
+			box-shadow: 2px 2px grey;
+		}
+		#list-group {
+			padding: 10px;
+		}
+		#title {
+			color:white;
+			text-shadow: 6px 6px 3px grey;
+			font-family:"Hobo Std","微軟正黑體", "Microsoft JhengHei", "新細明體", "PMingLiU", "標楷體", "DFKai-sb", serif;
+		}
+		footer {
+			background-color: black;
+			color: white;
+			padding: 3px;
+		}
+
+		#header {
+			background: white;
+			background: linear-gradient(to bottom right, white, #77BAE3);
+		}
+	</style>
+
+</head>
+<body onload="randoming()">
+	
+	
+
+	<!-- jQuery (Bootstrap 所有外掛均需要使用) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <div id="headbar" style="background-color: black;" height="100px" width="100%">
+    			<div id="name" align="left" style="padding: 2px; box-shadow: 2px 2px grey;">
+    				F74031051&nbsp資訊系107&nbsp林允文 &nbsp
+    			</div>
+    </div>
+
+    <div id="header" height="20%" width="100%">
+    	<div id="imageShow">
+    		<div id="title" style="position: absolute; left: 380px; top:15px; font-size:120px; z-index=-2;">Web</div>
+    		<div id="title" style="position: absolute; left: 660px; top:15px; font-size:120px; z-index=-1;">Application</div>
+       		<div style="position: absolute; left: 850px; top:125px; font-size:60px; z-index=1;">and </div>
+    		<div id="title" style="position: absolute; left: 750px; top:170px; font-size:80px; z-index:0;">Programming</div>    	
+    		<img id="showing" src="" height="250" width="400" style="padding: 3px;">
+
+    	</div>
+    </div>
+
+    <div id="leftMenu" style=" float:left;height:100%; width:20%;">
+    	<br>
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+	  <div class="panel panel-default" style="box-shadow: 2px 2px 1px grey;">
+	    <div class="panel-heading" role="tab" id="headingOne">
+	      <h4 class="panel-title">
+	        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="menuBt" style="font-size:20px; ">
+	          個人簡歷
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+	      <div class="list-group" onclick="changeIframe('autobiography.html')" style="padding: 2px; font-size:16px; cursor:pointer;">
+	        &nbsp&nbsp&nbsp&nbsp個人自傳
+	      </div>
+	      <div class="list-group" onclick="changeIframe('resume.html')" style="padding: 2px; font-size:16px; cursor:pointer;">
+	        &nbsp&nbsp&nbsp&nbsp個人履歷
+	      </div>
+	    </div>
+	  </div>
+	  <div class="panel panel-default" style="box-shadow: 2px 2px 1px grey;">
+	    <div class="panel-heading" role="tab" id="headingTwo">
+	      <h4 class="panel-title">
+	        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="menuBt" style="font-size:20px;">
+	        	活動相簿
+	        </a>
+	      </h4>
+	    </div>
+	    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+	      <div class="list-group" onclick="changeIframe('album1.html')" style="padding: 2px; font-size:16px; cursor:pointer;">
+	       	&nbsp&nbsp&nbsp&nbsp資訊系沙控
+	      </div>
+	      <div class="list-group" onclick="changeIframe('album2.html')" style="padding: 2px; font-size:16px; cursor:pointer;">
+	       	&nbsp&nbsp&nbsp&nbsp武壢桃之夜
+	      </div>
+	      <div class="list-group" onclick="changeIframe('album3.html')" style="padding: 2px; font-size:16px; cursor:pointer;">
+	       	&nbsp&nbsp&nbsp&nbsp資訊系排球隊
+	      </div>
+	      <div class="list-group" onclick="changeIframe('album4.html')" style="padding: 2px; font-size:16px; cursor:pointer;">
+	       	&nbsp&nbsp&nbsp&nbsp資訊週
+	      </div>
+	    </div>
+	  </div>
+	  <div class="panel panel-default" style="box-shadow: 2px 2px 1px grey;">
+	    <div class="panel-heading" role="tab" id="headingThree">
+	      <h4 class="panel-title">
+			<!--<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+	          意見
+	        </a>-->
+	        <a onclick="changeIframe('suggest.html')" class="menuBt" style="font-size:20px; cursor:pointer;">
+	          意見
+	        </a>
+	      </h4>
+	    </div>
+	  </div>
+		</div>
+	</div>
+
+	<div id="content" style="height:100%;">
+		<br>
+		
+		<iframe id="frame" src="autobiography.html" height="95%" width="80%" frameborder="0" scrolling="no">
+		</iframe>
+		<br>
+	</div> 
+
+	<footer id="footer" align="center">
+		<p>林允文 Yun-Wen,Lin <br>
+			National Chang Kung University<br>
+			contact:l40303k@gmail.com&nbsp&nbsptele:0958632897</p>
+	</footer>
+
+</body>
+</html>
